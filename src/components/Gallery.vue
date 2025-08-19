@@ -27,7 +27,7 @@ const images = ref([
     <h2>Galería</h2>
     <div class="gallery">
       <div class="gallery-item" v-for="(image, index) in images" :key="index">
-        <img :src="image.src" :alt="image.alt" />
+        <img :src="image.src" :alt="image.alt" loading="lazy" />
       </div>
     </div>
   </div>
