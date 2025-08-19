@@ -6,6 +6,7 @@ import Sidebar from "@/components/Sidebar.vue";
 import RSVPForm from "@/components/RSVPForm.vue";
 import Gallery from "@/components/Gallery.vue";
 import PartyDetails from "@/components/PartyDetails.vue";
+import Footer from "@/components/Footer.vue";
 import Gifts from "@/components/Gifts.vue";
 import { ref, onMounted } from "vue";
 
@@ -34,8 +35,10 @@ onMounted(() => {
       <div v-if="showInformation" id="information">
         <PartyDetails />
       </div>
-      <!-- <Gifts/> -->
       <RSVPForm />
+      <div v-if="showInformation">
+        <Footer />
+      </div>
     </div>
   </div>
 </template>

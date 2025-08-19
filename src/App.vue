@@ -1,6 +1,6 @@
 <script setup>
-import { RouterView, RouterLink } from 'vue-router';
-import Footer from './components/Footer.vue';
+import { RouterView, RouterLink } from "vue-router";
+import Footer from "./components/Footer.vue";
 </script>
 
 <template>
@@ -12,9 +12,6 @@ import Footer from './components/Footer.vue';
     <main>
       <RouterView />
     </main>
-
-    <!-- Pie de página -->
-    <!-- <Footer /> -->
   </div>
 </template>
 
