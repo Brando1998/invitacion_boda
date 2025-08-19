@@ -1,0 +1,95 @@
+/* Definición de variables de color y espaciado */
+:root {
+  /* 🎨 Colores */
+  --primary-color: #2D401A; /* Verde base */
+  --secondary-color: #de675f; /* Complementario al verde */
+  --background-color: #F7F5E9; /* Fondo suave */
+  --text-color: #333; /* Texto principal */
+  --accent-color: #987c61; /* Toques de color */
+  
+  /* 📏 Espaciado dinámico */
+  --spacing-small: calc(0.5rem + 0.5vw);
+  --spacing-medium: calc(1rem + 1vw);
+  --spacing-large: calc(2rem + 2vw);
+  --border-radius: 8px;
+
+  /* Tamaños de texto dinámicos */
+  --text-xs: calc(0.75rem + 0.5vw); /* Pequeño */
+  --text-sm: calc(0.875rem + 0.5vw);
+  --text-base: calc(1rem + 0.5vw); /* Normal */
+  --text-lg: calc(1.25rem + 0.75vw); /* Grande */
+  --text-xl: calc(1.5rem + 1vw);
+  --text-2xl: calc(2rem + 1.5vw);
+  --text-3xl: calc(3rem + 2vw);
+  --text-4xl: calc(4rem + 3vw); /* Muy grande */
+}
+
+/* 📌 Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cormorant Garamond", sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+h1 { font-size: var(--text-2xl); }
+h2 { font-size: var(--text-xl); }
+h3 { font-size: var(--text-lg); }
+p, li, span { font-size: var(--text-base); }
+
+
+/* 🏗️ Diseño responsivo */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-medium);
+}
+
+/* 📌 Estilos de botones */
+.btn {
+  display: inline-block;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--secondary-color);
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: var(--primary-color);
+}
+
+/* 📌 Layout de columnas */
+.two-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-medium);
+}
+
+.three-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-medium);
+}
