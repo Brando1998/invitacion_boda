@@ -84,6 +84,7 @@ const cornerStyles = [
   font-size: var(--text-2xl);
   margin-bottom: var(--spacing-small);
   color: var(--text-color);
+  line-break: anywhere;
 }
 
 .center-ornament {

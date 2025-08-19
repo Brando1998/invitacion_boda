@@ -45,7 +45,7 @@ p, li, span { font-size: var(--text-base); }
 
 /* 🏗️ Diseño responsivo */
 .container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: var(--spacing-medium);
 }
@@ -82,11 +82,20 @@ p, li, span { font-size: var(--text-base); }
 }
 
 /* 📌 Layout de columnas */
+/* Contenedor de dos columnas */
 .two-columns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-medium);
+  grid-template-columns: 1fr; /* por defecto una sola columna (mobile first) */
+  gap: var(--spacing-large);
 }
+
+/* En pantallas medianas y grandes: dos columnas */
+@media (min-width: 768px) {
+  .two-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 
 .three-columns {
   display: grid;

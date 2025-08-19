@@ -60,5 +60,9 @@ onMounted(() => {
   .content {
     margin-left: 0;
   }
+
+  .home-container {
+    flex-direction: column; /* Sidebar arriba, contenido abajo */
+  }
 }
 </style>
